@@ -1,0 +1,9 @@
+#footer {
+  padding-top: 20px;
+  margin: 0 auto 15px;
+}
+#github-ref {
+  text-decoration: none;
+  font-size: 12px;
+  padding-right: 5px;
+}

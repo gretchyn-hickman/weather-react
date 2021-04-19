@@ -1,16 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Search from "./Search";
+import Weather from "./Weather";
+import Footer from "./Footer";
+
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Hello World
-        </h1>
-      </header>
+      <div className="container">
+        <div className="card" id="search">
+          <Search />
+          <div className="container search-city">
+            <Weather />
+          </div>
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
 
-export default App;

@@ -9,7 +9,7 @@ export default function Footer() {
       <small>
         <a
           id="github-ref"
-          href="https://github.com/laura-g56/weather-app-2021"
+          href="https://github.com/laura-g56/weather-react"
           target="_blank norefferer"
         >
           Open-source code

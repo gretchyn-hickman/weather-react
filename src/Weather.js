@@ -4,7 +4,7 @@ import "./Weather.css";
 
 export default function Weather() {
   let weatherData = {
-    dateTime: "Friday 9 Apr 2021 5:36 PM",
+    dateTime: "Friday 23 Apr 2021 5:36 PM",
     city: "Melbourne, AU",
     image: "images/partly-cloudy.svg",
     description: "Cloudy",

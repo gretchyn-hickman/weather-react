@@ -2,6 +2,7 @@ import React from "react";
 
 import Search from "./Search";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 import "./App.css";
@@ -14,6 +15,7 @@ export default function App() {
           <Search />
           <div className="container search-city">
             <Weather />
+            <Forecast />
           </div>
           <Footer />
         </div>
@@ -21,4 +23,3 @@ export default function App() {
     </div>
   );
 }
-

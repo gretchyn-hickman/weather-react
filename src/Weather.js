@@ -6,7 +6,7 @@ export default function Weather() {
   let weatherData = {
     dateTime: "Friday 9 Apr 2021 5:36 PM",
     city: "Melbourne, AU",
-    image: "https://img.icons8.com/cotton/128/000000/clouds--v1.png",
+    image: "images/partly-cloudy.svg",
     description: "Cloudy",
     temperature: 24,
     humidity: 25,

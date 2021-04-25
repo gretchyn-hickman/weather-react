@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="12.089694mm"
+   height="15.809383mm"
+   viewBox="0 0 12.089693 15.809386"
+   version="1.1"
+   id="svg11514"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="night-clear.svg">
+  <defs
+     id="defs11508">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4096">
+      <path
+         d="m 185.521,327.85 h 63.075 v -43.006 h -63.075 z"
+         id="path4094" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4464">
+      <path
+         d="m 436.22,594.375 h 34.271 V 549.561 H 436.22 Z"
+         id="path4462" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.0916976"
+     inkscape:cx="24.280477"
+     inkscape:cy="28.100639"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1298"
+     inkscape:window-height="816"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata11511">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-133.83658,-165.12441)">
+    <g
+       clip-path="url(#clipPath4464)"
+       opacity="0.0999985"
+       id="g4470"
+       style="opacity:0.85;fill:#d5fff6"
+       transform="matrix(0.35277777,0,0,-0.35277777,-20.052279,374.8067)">
+      <g
+         transform="translate(458.6274,591.7402)"
+         id="g4468"
+         style="fill:#d5fff6">
+        <path
+           d="m 0,0 c -10.902,0 -19.771,-8.869 -19.771,-19.771 0,-10.903 8.869,-19.772 19.771,-19.772 2.895,0 5.54,0.494 7.896,1.477 -5.735,4.203 -9.214,11.013 -9.214,18.295 0,7.279 3.479,14.089 9.214,18.294 C 5.54,-0.496 2.895,0 0,0 m 0,-42.18 c -12.355,0 -22.407,10.053 -22.407,22.409 0,12.355 10.052,22.406 22.407,22.406 4.209,0 7.979,-0.946 11.205,-2.813 0.407,-0.236 0.658,-0.67 0.658,-1.14 0,-0.471 -0.251,-0.907 -0.658,-1.141 -6.099,-3.529 -9.887,-10.164 -9.887,-17.312 0,-7.151 3.788,-13.784 9.887,-17.313 0.407,-0.236 0.658,-0.67 0.658,-1.141 0,-0.47 -0.251,-0.906 -0.658,-1.14 C 7.979,-41.232 4.209,-42.18 0,-42.18"
+           style="fill:#d5fff6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path4466" />
+      </g>
+    </g>
+  </g>
+</svg>

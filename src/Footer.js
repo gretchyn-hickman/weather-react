@@ -7,14 +7,23 @@ export default function Footer() {
   return (
     <div className="Footer" id="footer">
       <small>
+        Coded by Laura Gumienik,{" "}
         <a
           id="github-ref"
           href="https://github.com/laura-g56/weather-react"
           target="_blank norefferer"
         >
-          Open-source code
+           open-sourced on GitHub,
         </a>
-        designed by Laura Gumienik.
+        and{" "}
+          <a
+            id="github-ref"
+            href="https://suspicious-meninsky-847725.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          hosted on Netlify.
+          </a>
       </small>
     </div>
   );

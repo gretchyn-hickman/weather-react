@@ -1,20 +1,5 @@
 import React from "react";
 
-//Change time from AM to PM (format Hours)
-// function formatAMPM(date) {
-//   var hours = date.getHours();
-//   var minutes = date.getMinutes();
-//   var ampm = hours >= 12 ? "PM" : "AM";
-
-//   hours = hours % 12;
-//   hours = hours ? hours : 12; //hour '0' should be '12'
-//   minutes = minutes < 10 ? "0" + minutes : minutes;
-
-//   var ampm = hours + ":" + minutes + " " + ampm;
-
-//   return ampm;
-// }
-
 export default function FormattedDate(props) {
   let days = [
     "Sunday",
@@ -40,6 +25,7 @@ export default function FormattedDate(props) {
     "Nov",
     "Dec"
   ];
+
   let now = new Date();
   let date = now.getDate();
   let currentDay = days[now.getDay()];
@@ -49,14 +35,19 @@ export default function FormattedDate(props) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
+
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
+  let amPm = hours <= 11 ? "AM" : "PM";
+  hours = hours % 12 || 12;
+
   return (
     <div className="currentDate">
       {currentDay} {date} {month}, {year} {hours}:{minutes}
+      {amPm}
     </div>
   );
 }

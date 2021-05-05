@@ -1,3 +1,8 @@
+.city {
+  color: rgb(201, 201, 201);
+  display: block;
+  text-align: center;
+}
 .search-city {
   padding: 20px 10px 0px;
 }
@@ -14,7 +19,7 @@
 }
 #search-icon {
   position: relative;
-  bottom: 30px;
+  bottom: 32px;
   left: 83%;
   padding: 0;
   margin: 0;

@@ -7,13 +7,14 @@ body {
   max-width: 575px;
   padding-top: 20px;
   padding-bottom: 20px;
+  /* background-image: url("./nature.png"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
 h2 {
   display: block;
-  padding-top: 20px;
-  font-size: 40px;
+  padding-top: 10px;
+  font-size: 35px;
   font-weight: bold;
 }
 h6 {
@@ -22,7 +23,7 @@ h6 {
 }
 p {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   padding-top: 0;
   margin: 0;
 }
@@ -30,7 +31,7 @@ a {
   color: #8cc5a5;
   cursor: pointer;
   transition: ease-in-out 200ms;
-  font-size: 20px;
+  font-size: 16px;
 }
 a:hover {
   color: #01d65d;
@@ -48,6 +49,10 @@ li {
   font-size: 16px;
   font-weight: normal;
   text-align: left;
+}
+footer {
+  padding-top: 20px;
+  margin: 0 auto 15px;
 }
 i {
   padding: 5px;

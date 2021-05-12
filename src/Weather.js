@@ -14,7 +14,7 @@ export default function Weather(props) {
       <h2 id="city">
         {props.data.city}, {props.data.country}
       </h2>
-      <Icon code={props.data.icon} size={85} />
+      <Icon icon={props.data.icon} size={85} />
       <p className="description" id="description">
         {props.data.description}
       </p>
@@ -36,7 +36,7 @@ export default function Weather(props) {
             {props.data.humidity}%
           </li>
           <li>
-            Chance of rain: <span id="precipitation">3</span>
+            Chance of rain: <span id="precipitation">0</span>
             {props.data.rain}%
           </li>
         </ul>

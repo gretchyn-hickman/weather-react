@@ -1,49 +1,49 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import DailyForecast from "./DailyForecast";
 import "./Forecast.css";
 
-export default function Forecast() {
-  return (
-    <div className="row weather-forecast" id="forecast">
-      <div className="days col-5 col-md-auto text-center">
-        <h6>Sat</h6>
-        <img src="images/stormy.svg" alt="stormy" />
-        <div className="weather-forecast-temperature">
-          <strong>17°</strong> | 10°
-        </div>
-      </div>
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
-      <div className="days col-5 col-md-auto text-center">
-        <h6>Sun</h6>
-        <img src="images/partly-cloudy.svg" alt="cloudy" />
-        <div className="weather-forecast-temperature">
-          <strong>23°</strong> | 14°
-        </div>
-      </div>
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
-      <div className="days col-5 col-md-auto text-center">
-        <h6>Mon</h6>
-        <img src="images/haze.svg" alt="hazy" />
-        <div className="weather-forecast-temperature">
-          <strong>29°</strong> | 15°
-        </div>
-      </div>
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
 
-      <div className="days col-5 col-md-auto text-center">
-        <h6>Tue</h6>
-        <img src="images/heavy-rain.svg" alt="rainy" />
-        <div className="weather-forecast-temperature">
-          <strong>19°</strong> | 12°
-        </div>
-      </div>
+  function update() {
+    let apiKey = "c9372dd2ab0fc70c02af13cd16583303";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-      <div className="days col-5 col-md-auto text-center">
-        <h6>Wed</h6>
-        <img src="images/sunny.svg" alt="sunny" />
-        <div className="weather-forecast-temperature">
-          <strong>18°</strong> | 13°
-        </div>
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  if (loaded) {
+    return (
+      <div className="row weather-forecast" id="forecast">
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 5) {
+            return (
+              <div className="col" key={index}>
+                <DailyForecast data={dailyForecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
-    </div>
-  );
+    );
+  } else {
+    update();
+
+    return null;
+  }
 }

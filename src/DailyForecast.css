@@ -1,0 +1,14 @@
+.days {
+  padding: 0 20px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.row {
+  text-align: center;
+  font-size: 13px;
+}
+.weather-forecast {
+  margin: 0% 3%;
+  display: inline-flex;
+  padding-bottom: 10px;
+}

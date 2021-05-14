@@ -40,6 +40,20 @@ export default function Search(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+    function getCurrentLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    const apiKey = "c9372dd2ab0fc70c02af13cd16583303";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function fetchLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Search-Form">
@@ -56,6 +70,13 @@ export default function Search(props) {
               />
               <button id="search-icon" className="icon">
                 <i className="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <button
+                id="location-icon"
+                className="icon"
+                onClick={fetchLocation}
+              >
+                <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
               </button>
             </div>
           </div>

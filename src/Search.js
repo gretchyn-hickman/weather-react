@@ -9,6 +9,7 @@ import Loader from "react-loader-spinner";
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function handleResponse(response) {
     console.log(response.data);
@@ -24,6 +25,9 @@ export default function Search(props) {
       city: response.data.name,
       country: response.data.sys.country
     });
+    // rainData({
+    //   rain: Math.round(response.data.daily[0].pop * 100)
+    // });
   }
 
   function handleSubmit(event) {
@@ -41,10 +45,16 @@ export default function Search(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-    function getCurrentLocation(position) {
+  // function rainData() {
+  //   let apiKey = "c9372dd2ab0fc70c02af13cd16583303";
+  //   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  //   axios.get(apiUrl).then(handleResponse);
+  // }
+
+  function getCurrentLocation(position) {
+    const apiKey = "c9372dd2ab0fc70c02af13cd16583303";
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    const apiKey = "c9372dd2ab0fc70c02af13cd16583303";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
@@ -82,8 +92,8 @@ export default function Search(props) {
             </div>
           </div>
         </form>
-        <Weather data={weatherData} />
-        <Forecast coordinates={weatherData.coordinates} />
+        <Weather data={weatherData} unit={unit} setUnit={setUnit} />
+        <Forecast coordinates={weatherData.coordinates} unit={unit} />
       </div>
     );
   } else {

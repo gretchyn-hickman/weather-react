@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Temperature(props) {
-  const [unit, setUnit] = useState("celsius");
-
   function toFahrenheit(event) {
     event.preventDefault();
-    setUnit("fahrenheit");
+    props.setUnit("fahrenheit");
   }
 
   function toCelsius(event) {
     event.preventDefault();
-    setUnit("celsius");
+    props.setUnit("celsius");
   }
 
-  if (unit === "celsius") {
+  if (props.unit === "celsius") {
     return (
       <div className="Temperature" id="temperature">
         <span className="temperature">{Math.round(props.celsius)}</span>

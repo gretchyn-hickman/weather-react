@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import Icon from "./Icon";
 import Temperature from "./Temperature";
+// import Rain from "./Rain";
 
 import "./Weather.css";
 
@@ -21,7 +22,11 @@ export default function Weather(props) {
 
       <div className="temperature">
         <p>
-          <Temperature celsius={props.data.temperature} />
+          <Temperature
+            celsius={props.data.temperature}
+            unit={props.unit}
+            setUnit={props.setUnit}
+          />
         </p>
       </div>
 
@@ -36,8 +41,9 @@ export default function Weather(props) {
             {props.data.humidity}%
           </li>
           <li>
-            Chance of rain: <span id="precipitation">0</span>
+            Chance of rain: <span id="precipitation"></span>
             {props.data.rain}%
+            {/* <Rain coordinates={props.data.coordinates} /> */}
           </li>
         </ul>
       </div>

@@ -4,6 +4,7 @@ import Forecast from "./Forecast";
 import axios from "axios";
 
 import "./Search.css";
+import Loader from "react-loader-spinner";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -87,6 +88,15 @@ export default function Search(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="loader">
+        <Loader
+          type="ThreeDots"
+          color="rgb(113, 143, 182)"
+          height={85}
+          width={85}
+        />
+      </div>
+    );
   }
 }

@@ -11,7 +11,6 @@ export default function App() {
       <div className="container">
         <div className="card" id="search">
           <Search defaultCity="Geelong" />
-          <div className="container search-city"></div>
           <Footer />
         </div>
       </div>

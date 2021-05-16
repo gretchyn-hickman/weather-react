@@ -9,16 +9,14 @@ import "./Weather.css";
 export default function Weather(props) {
   return (
     <div className="Weather">
-      <p className="date" id="dayAndTime">
+      <p>
         <FormattedDate date={props.data.date} />
       </p>
-      <h2 id="city">
+      <h2 className="City">
         {props.data.city}, {props.data.country}
       </h2>
       <Icon icon={props.data.icon} size={85} />
-      <p className="description" id="description">
-        {props.data.description}
-      </p>
+      <p className="description">{props.data.description}</p>
 
       <div className="temperature">
         <p>
@@ -33,18 +31,12 @@ export default function Weather(props) {
       <div className="extras">
         <ul>
           <li>
-            Wind: <span id="wind"></span>
-            {props.data.wind}km/h
+            Wind: <span>{props.data.wind}km/h</span>
           </li>
           <li>
-            Humidity: <span id="humidity"></span>
-            {props.data.humidity}%
+            Humidity: <span>{props.data.humidity}%</span>
           </li>
-          <li>
-            Chance of rain: <span id="precipitation"></span>
-            {props.data.rain}%
-            {/* <Rain coordinates={props.data.coordinates} /> */}
-          </li>
+          <li>{/* <Rain /> */}</li>
         </ul>
       </div>
     </div>

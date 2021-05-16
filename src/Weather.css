@@ -3,34 +3,7 @@
   display: block;
   text-align: center;
 }
-.card {
-  display: block;
-  text-align: center;
-  background-image: linear-gradient(180deg, #00273a, 30%, #135c86);
-  border-radius: 20px;
-  border-width: 5px;
-  border-color: rgb(113, 143, 182);
-}
-#icon {
-  height: 130px;
-  width: 120px;
-}
 .description {
   font-size: 18px;
   text-transform: uppercase;
-}
-.temperature #temperature {
-  font-size: 65px;
-  text-shadow: 3px 4px 5px #002030;
-  font-weight: normal;
-}
-.temperature .active {
-  color: #01d65d;
-  cursor: default;
-  text-decoration: none;
-}
-.units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
 }

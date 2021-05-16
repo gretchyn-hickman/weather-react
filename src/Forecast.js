@@ -12,11 +12,12 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
+    console.log(response.data);
     setForecast(response.data.daily);
     setLoaded(true);
   }
 
-  function update() {
+  function fetchForecast() {
     let apiKey = "c9372dd2ab0fc70c02af13cd16583303";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
@@ -27,7 +28,7 @@ export default function Forecast(props) {
 
   if (loaded) {
     return (
-      <div className="row weather-forecast" id="forecast">
+      <div className="row weather-forecast">
         {forecast.map(function (dailyForecast, index) {
           if (index < 5) {
             return (
@@ -42,7 +43,7 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    update();
+    fetchForecast();
 
     return null;
   }

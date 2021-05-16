@@ -1,8 +1,3 @@
-.city {
-  color: rgb(201, 201, 201);
-  display: block;
-  text-align: center;
-}
 .search-city {
   padding: 20px 10px 0px;
 }
@@ -19,7 +14,7 @@
   color: #14618d;
   border: none;
 }
-#search-icon {
+.search-icon {
   position: relative;
   bottom: 37px;
   left: 80%;
@@ -30,11 +25,11 @@
   border: none;
   color: #155d86;
 }
-button#search-icon:hover {
+button.search-icon:hover {
   color: rgb(113, 143, 182);
 }
 
-#location-icon {
+.location-icon {
   position: relative;
   bottom: 71px;
   left: 88.5%;
@@ -46,6 +41,6 @@ button#search-icon:hover {
   border-radius: 3px;
   color: rgb(201, 201, 201);
 }
-button#location-icon:hover {
+button.location-icon:hover {
   color: rgb(113, 143, 182);
 }

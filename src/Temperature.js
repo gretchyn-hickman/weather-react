@@ -1,4 +1,5 @@
 import React from "react";
+import "./Temperature.css";
 
 export default function Temperature(props) {
   function toFahrenheit(event) {
@@ -13,7 +14,7 @@ export default function Temperature(props) {
 
   if (props.unit === "celsius") {
     return (
-      <div className="Temperature" id="temperature">
+      <div className="Temperature">
         <span className="temperature">{Math.round(props.celsius)}</span>
         <span className="units">
           °C |{" "}
@@ -27,7 +28,7 @@ export default function Temperature(props) {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
 
     return (
-      <div className="Temperature" id="temperature">
+      <div className="Temperature">
         <span className="temperature">{Math.round(fahrenheit)}</span>
         <span className="units">
           <a href="/" onClick={toCelsius}>

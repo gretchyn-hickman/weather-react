@@ -1,0 +1,15 @@
+.temperature {
+  font-size: 65px;
+  text-shadow: 3px 4px 5px #002030;
+  font-weight: normal;
+}
+.temperature .active {
+  color: #01d65d;
+  cursor: default;
+  text-decoration: none;
+}
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}

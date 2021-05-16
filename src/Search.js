@@ -25,9 +25,6 @@ export default function Search(props) {
       city: response.data.name,
       country: response.data.sys.country
     });
-    // rainData({
-    //   rain: Math.round(response.data.daily[0].pop * 100)
-    // });
   }
 
   function handleSubmit(event) {
@@ -44,12 +41,6 @@ export default function Search(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
-
-  // function rainData() {
-  //   let apiKey = "c9372dd2ab0fc70c02af13cd16583303";
-  //   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  //   axios.get(apiUrl).then(handleResponse);
-  // }
 
   function getCurrentLocation(position) {
     const apiKey = "c9372dd2ab0fc70c02af13cd16583303";
@@ -76,17 +67,12 @@ export default function Search(props) {
                 className="city-search-control"
                 placeholder="Search city..."
                 autoComplete="off"
-                id="city-input"
                 onChange={handleCityChange}
               />
-              <button id="search-icon" className="icon">
+              <button className="search-icon">
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
-              <button
-                id="location-icon"
-                className="icon"
-                onClick={fetchLocation}
-              >
+              <button className="location-icon" onClick={fetchLocation}>
                 <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
               </button>
             </div>
